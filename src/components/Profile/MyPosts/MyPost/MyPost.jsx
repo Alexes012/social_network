@@ -6,8 +6,7 @@ const MyPost = (props) => {
         <div>
             <div className={s.posts}>
                 <div className={s.item}>
-                    <img
-                        src='https://avatars.mds.yandex.net/get-pdb/1605014/85a5a494-87e9-48e2-93a3-156452ea233c/s1200?webp=false'/>
+                    <img src='https://sun9-65.userapi.com/c855224/v855224266/1ead22/j0xxrYB8JRo.jpg'/>
                     {props.message}
                     <div>
                         <span>like</span>

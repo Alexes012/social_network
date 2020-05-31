@@ -5,7 +5,7 @@
 
 .dialogsItem {
     padding: 10px;
-    color: white;
+    color: black;
 }
 
 .dialogsItem .active {
@@ -17,5 +17,10 @@
 }
 
 .messages .message {
-    color: white;
+    color: black;
+}
+
+textarea {
+    min-height: 100px;
+    min-width: 400px;
 }

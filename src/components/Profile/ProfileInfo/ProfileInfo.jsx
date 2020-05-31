@@ -2,17 +2,16 @@ import React from 'react';
 import s from "./ProfileInfo.module.css"
 
 const ProfileInfo = () => {
+
     return (
-        <div>
-            <div>
-                <img
-                    src='https://cinema-quest.by/wp-content/uploads/2019/09/certificateBg-1024x251.jpg'/>
-            </div>
-            <div className={s.discriptonBlock}>
-                Ava + description
+        <div className={s.discriptonBlock}>
+            <div className={s.container}>
+                <div className={s.image}>
+                    <div className={s.photo}/>
+                </div>
             </div>
         </div>
     );
-}
+};
 
 export default ProfileInfo;
