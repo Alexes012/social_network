@@ -7,24 +7,14 @@ import App from './App';
 import {BrowserRouter} from "react-router-dom"
 import {Provider} from "react-redux";
 
+ReactDOM.render(
+    <BrowserRouter>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </BrowserRouter>,
+    document.getElementById('root'));
 
-let reRenderEntireTree = (state) => {
-    ReactDOM.render(
-        <BrowserRouter>
-            <Provider store={store}>
-                <App/>
-            </Provider>
-        </BrowserRouter>,
-        document.getElementById('root'));
-};
-
-
-reRenderEntireTree(store.getState());
-
-store.subscribe(() => {
-    let state = store.getState();
-    reRenderEntireTree(state);
-});
 
 serviceWorker.unregister();
 
