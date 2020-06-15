@@ -1,12 +1,25 @@
 .nav {
     grid-area: n;
     background-color: #ffffff;
-    padding: 40px;
+    padding: 40px 0;
 }
+
+.itemContainer {
+    height: 30px;
+    width: 99%;
+    font-size: 17px;
+    padding: 2px 0;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+}
+
 .item a{
     color: black;
     text-decoration: none;
 }
 .item a.active{
-    color: #8c3ba5;
+    color: #2a5885;
 }

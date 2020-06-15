@@ -1,23 +1,43 @@
 .discriptonBlock {
-    padding: 10px;
+    padding: 15px;
 }
 
 .container {
-    border: 1px solid black;
-    padding: 10px ;
     display: flex;
 }
 
 .image {
     border: 1px solid black;
+    height: 200px;
+    width: 100%;
+    background-image: url("https://www.zastavki.com/pictures/originals/2014/Nature___Rivers_and_lakes_Amazingly_beautiful_mountain_lake_083573_.jpg");
+    background-size: cover;
 }
 
-.photo {
+.containerDS {
+    padding: 30px 0;
     height: 200px;
-    width: 200px;
-    border: 5px solid gray;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.userPhoto {
+    border: 2px solid black;
     border-radius: 10px;
-    background-image: url("https://sun9-65.userapi.com/c855224/v855224266/1ead22/j0xxrYB8JRo.jpg");
-    background-size: cover;
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+}
+
+.userPhoto img {
+    height: 100%;
+    width: 100%;
+}
+
+.discription {
+    border: 1px solid black;
+    height: 100px;
+    width: 300px;
 }
 
