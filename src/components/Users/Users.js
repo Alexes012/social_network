@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Users.module.css";
 import userPhoto from '../../assets/images/kisspng-computer-icons-avatar-skull-avatar-5afe70565ba475.5372152615266243423754.jpg'
 import {NavLink} from "react-router-dom";
+import * as axios from "axios";
 
 let Users = (props) => {
 
@@ -32,11 +33,33 @@ let Users = (props) => {
                     <div>
                         {u.followed
                             ? <button onClick={() => {
-                                props.unfollow(u.id)
-                            }}>UNFOLLOW</button>
+                                axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {
+                                    withCredentials: true,
+                                    headers: {
+                                        "API-KEY": "f1ca260c-aaad-4b38-a88f-c2a8fdcac379"
+                                    }
+                                })
+                                    .then(response => {
+                                        if (response.data.resultCode === 0) {
+                                            props.unfollow(u.id)
+                                        }
+                                    })
+                            }}>Отписаться</button>
+
                             : <button onClick={() => {
-                                props.follow(u.id)
-                            }}>FOLLOW</button>}
+                                axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {} , {
+                                    withCredentials: true,
+                                    headers: {
+                                        "API-KEY": "f1ca260c-aaad-4b38-a88f-c2a8fdcac379"
+                                    }
+                            })
+                                    .then(response => {
+                                        if (response.data.resultCode === 0) {
+                                            props.follow(u.id)
+                                        }
+                                    })
+                            }}>Подписаться</button>}
+
                     </div>
                 </span>
                         <span>
