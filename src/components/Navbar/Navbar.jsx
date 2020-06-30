@@ -29,6 +29,8 @@ const Navbar = () => {
                 </div>
             </div>
 
+            {/*//onClick={()=>this.scrollTo(3)}*/}
+
             <div className={classes.itemContainer}>
                 <div className={classes.item}>
                     <a>Музыка</a>
