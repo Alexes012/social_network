@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./Users.module.css";
-import userPhoto
-    from '../../assets/images/kisspng-computer-icons-avatar-skull-avatar-5afe70565ba475.5372152615266243423754.jpg'
+import userPhoto from '../../assets/images/user.svg'
 import {NavLink} from "react-router-dom";
-import {usersAPI} from "../../api/api";
 
 let Users = (props) => {
 

@@ -1,9 +1,14 @@
 import React from "react";
-import loadingSVG from "../../assets/images/loading.svg";
+import styles from './Preloader.module.css'
+import loadingSVG from "../../assets/images/preloader.gif";
 
 const Preloader = () => {
     return (
-        <img src={loadingSVG}/>
+        <div className={styles.container}>
+            <div>
+                <img src={loadingSVG}/>
+            </div>
+        </div>
     )
 }
 
